@@ -1,0 +1,15 @@
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+.button-group .button {
+  margin-right: 8px;
+}
+
+.button-group.expanded .button:first-child:nth-last-child(2),
+.button-group.expanded .button:first-child:nth-last-child(2):first-child:nth-last-child(2) ~ .button {
+  display: inline-block;
+  width: calc(50% - 8px);
+  margin-right: 8px;
+}

@@ -1,0 +1,142 @@
+body {
+  background-image: url('../img/bg-tile.jpg');
+  background-color: $black;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  background-attachment: fixed;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 80;
+  overflow: hidden;
+  width: 100%;
+  &.open .content-canvas {
+    -webkit-transform: translateX(-300px);
+    transform: translateX(-300px);
+    -webkit-transform: translate3d(-300px, 0, 0);
+    transform: translate3d(-300px, 0, 0);
+    @include breakpoint(small only) {
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
+}
+.content-canvas {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition: 300ms ease all;
+  transition: 300ms ease all;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.main-content {
+ min-height: 600px;
+ padding-top: 4em;
+ padding-bottom: 4em;
+}
+.row-wrapper {
+  .row {
+    background: $white;
+  }
+}
+
+// Quick Cart & Shade
+
+#slideout-shade {
+  transition: opacity .3s ease-in-out;
+  opacity: 0;
+  position: fixed;
+  &.open {
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.8);
+    display: block;
+    z-index: 99;
+    opacity: 1;
+  }
+
+}
+.quick-cart {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  right: -300px;
+  background: #f7f7f7;
+  @include breakpoint(small only) {
+    width: 100%;
+    right: -100%;
+  }
+  p {
+    margin: 0;
+  }
+}
+.quick-cart-item-row {
+  padding-top: .4rem;
+  padding-bottom: .4rem;
+  position: relative;
+
+  &:first-child {
+    padding-top: .8rem;
+  }
+}
+.quick-cart-totals {
+  p {
+    padding-top: .5em;
+    padding-bottom: .5em;
+    font-size: 1.2rem;
+  }
+}
+.quick-cart-remove {
+  a {
+    color: red;
+    font-size: .9rem;
+  }
+}
+
+.quick-cart-button-group {
+  padding-top: .4rem;
+}
+
+
+
+em {
+  font-weight: bold;
+  font-style: normal;
+}
+.page-title-row {
+  h1 {
+    text-align: center;
+    font-weight: bold;
+    padding-top: 1rem;
+  }
+  a {
+    display: block;
+    width: 100%;
+  }
+  img {
+    width: 100%;
+    display: block;
+  }
+}
+
+.social-row {
+  a {
+    display: inline-block;
+    font-size: 3rem;
+    margin-right: .3em;
+  }
+}

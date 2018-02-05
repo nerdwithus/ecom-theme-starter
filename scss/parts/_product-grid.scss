@@ -1,0 +1,92 @@
+
+
+
+.grid-item {
+  margin-bottom: 1rem;
+  figure {
+    display: block;
+    position: relative;
+  }
+  a {
+    color: $black;
+    display: block;
+  }
+  p {
+    padding: 0;
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  }
+  .desc {
+    padding: 10px;
+  }
+  .item-title {
+    padding-bottom: 10px;
+    line-height: 1.4rem;
+  }
+  .item-price {
+    font-size: 1.4rem;
+    font-weight: bold;
+
+  }
+  .original-price {
+
+  }
+  .sale-price {
+    & + .original-price {
+      font-size: 1rem;
+      padding-left: .5rem;
+      i {
+        text-decoration: line-through;
+        color: #9BACB4;
+        font-style: normal;
+      }
+
+    }
+  }
+
+
+  .item-notice, .item-notice-sale {
+    opacity: .8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: bold;
+    font-size: .5rem;
+    padding: .5rem .75rem;
+    @include breakpoint(medium){
+      font-size: .8rem;
+    }
+  }
+  &.out-of-stock {
+    opacity: .5;
+    .item-notice {
+      background: red;
+      color: $white;
+    }
+  }
+  &.presale, .deposit, .coming-soon, .marked-down {
+    .item-notice {
+      background: blue;
+      color: $white;
+    }
+  }
+  &.on-sale {
+    .item-notice-sale {
+      z-index: 2;
+      background: red;
+      color: white;
+      text-align: center;
+      & + .item-notice {
+        top: 0;
+        right: 0;
+        left: auto;
+        @include breakpoint(medium){
+          top: 2.5rem;
+          right: auto;
+        }
+      }
+    }
+  }
+
+}

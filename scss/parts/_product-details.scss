@@ -1,0 +1,63 @@
+
+// Product Detail Page Overview
+.product-detail-page-container {
+  & > .row {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+}
+
+
+// Product Page Images
+$padding: .3rem;
+.product-detail-thumbs {
+  padding-top: $padding;
+  &.row {
+    margin-left: -$padding;
+    margin-right: -$padding;
+  }
+  .column {
+    padding: $padding;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+
+// Size Charts
+.product-size-chart-container {
+  @include breakpoint(small only) {
+    td {
+      font-size: .7rem;
+    }
+  }
+  @include breakpoint(medium only) {
+    td {
+      font-size: .8rem;
+    }
+  }
+}
+
+
+
+
+
+// User Actions
+.swatch-attribute {
+  width: 100%;
+}
+.swatch-attribute-options {
+
+  .swatch-option {
+    display: inline-block;
+    border: 1px solid #faf;
+    background: #999;
+    font-size: 1.2rem;
+    padding: 1em 2em;;
+  }
+}
+
+.input-number-quantity {
+  max-width: 60px;
+}

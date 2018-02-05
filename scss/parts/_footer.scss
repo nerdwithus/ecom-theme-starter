@@ -1,0 +1,33 @@
+.site-footer {
+  background: $black;
+  color: $white;
+  padding: 40px 0;
+  a {
+    color: $white;
+    opacity: .7;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  dl {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 20px;
+    dt {
+      font-weight: bold;
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+    }
+  }
+  h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  p {
+
+  }
+  .social-row {
+      font-size: 3rem;
+  }
+}

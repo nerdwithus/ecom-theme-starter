@@ -1,0 +1,24 @@
+// These files are broken up into better digestable parts
+//Variables
+
+$black: #000;
+$white: #fbfbfb;
+$grey: #1d1d1d;
+$lgrey: #292929;
+
+a {
+  transition: opacity .2s ease-in-out,
+              color .2s ease-in-out;
+}
+
+@import 'parts/resets';
+@import 'parts/fonts';
+@import 'parts/styleguide';
+@import 'parts/header';
+@import 'parts/navigation';
+@import 'parts/main';
+@import 'parts/product-grid';
+@import 'parts/product-details';
+@import 'parts/pagination';
+@import 'parts/filter-controls';
+@import 'parts/footer';

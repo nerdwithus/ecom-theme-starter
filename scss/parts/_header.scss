@@ -1,0 +1,45 @@
+.site-header {
+  background: $black;
+  padding: 20px 0;
+  .logo {
+    max-width: 200px;
+    margin: 0 auto 0 auto;
+    display: block;
+    @include breakpoint(medium up) {
+      margin: 0;
+    }
+  }
+
+  .cart-icon, .account-icon {
+    display: inline-block;
+    padding: 0 4px;
+    width: 47%;
+    margin: 0 0px;
+    line-height: 1;
+    font-size: 2rem;
+
+    color: $white;
+    opacity: .7;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+.form-small.input-group {
+  margin: 0;
+  .button {
+    line-height: 1;
+    vertical-align: middle;
+    border-radius: 0;
+    padding: 0.44em .75em;
+    margin: 0;
+    font-size: 1rem;
+  }
+  [type='text'], [type='password'], [type='date'], [type='datetime'], [type='datetime-local'], [type='month'], [type='week'], [type='email'], [type='number'], [type='search'], [type='tel'], [type='time'], [type='url'], [type='color'], textarea {
+    height: 2rem;
+    padding: .5rem;
+    border: 1px solid #fff;
+    font-size: 1rem;
+    color: #0a0a0a;
+  }
+}
